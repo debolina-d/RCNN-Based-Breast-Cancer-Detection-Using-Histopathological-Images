@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f5f5f5, #e6e6e6);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+        }
+
+        h1 {
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .result {
+            font-size: 18px;
+            color: #555;
+            margin: 15px 0;
+        }
+
+        .confidence {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .error {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #007bff;
+            padding: 12px 25px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            background: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <img src="{{ image }}" alt="Uploaded Image">
+        <div class="result">
+            <h2>Prediction: <span class="{{ 'error' if label == 'Malignant' else 'confidence' }}">{{ label }}</span></h2>
+            <!-- <h3>Confidence: <span>{{ confidence }}</span></h3> -->
+        </div>
+        <a href="/">Upload Another Image</a>
+    </div>
+</body>
+</html>
