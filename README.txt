@@ -31,8 +31,8 @@ This project implements a **Region-based Convolutional Neural Network (RCNN)** t
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/debolina-d/RCNN-Based-Cancer-Detection-Histopathological-Images.git
+cd RCNN-Based-Cancer-Detection-Histopathological-Images
 
 
 
